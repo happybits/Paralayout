@@ -154,19 +154,6 @@ public final class Label : UILabel {
         }
     }
     
-    // MARK: - Life Cycle
-    
-    // We have to re-declare this init since we override `init?(coder:)`.
-    override public init(frame: CGRect = .zero) {
-        super.init(frame: frame)
-    }
-    
-    @available(*, unavailable)
-    required public init?(coder aDecoder: NSCoder) {
-        // Label doesn't bother to properly encode some of its attributes, so block coding.
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     // MARK: - UILabel
     
     override public var text: String? {
