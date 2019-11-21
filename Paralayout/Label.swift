@@ -316,6 +316,19 @@ public final class Label : UILabel {
             activeLink = nil
         }
     }
+
+    // MARK: - NSObject
+
+    override public func awakeFromNib() {
+        super.awakeFromNib()
+
+        if let font = font {
+            internalFont = font
+        }
+        if let textColor = textColor {
+            internalTextColor = textColor
+        }
+    }
     
     // MARK: - Public Methods
     
